@@ -11,10 +11,12 @@ import Home from './src/Screens/Home/Home';
 const App = () => {
 
   return (
-    <SafeAreaView>
+    <>
       <StatusBar barStyle={"dark-content"} />
-      <Home />
-    </SafeAreaView>
+      <SafeAreaView>
+        <Home />
+      </SafeAreaView>
+    </>
   );
 };
 
