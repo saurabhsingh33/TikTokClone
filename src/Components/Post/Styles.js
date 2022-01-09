@@ -13,11 +13,12 @@ const Styles = StyleSheet.create({
         right: 0,
     },
     uiContainer: {
-        height: '100%',
+        height: Dimensions.get('window').height,
         justifyContent: 'flex-end',
     },
     bottomContainer: {
-        padding: 10,
+        paddingBottom: 30,
+        paddingLeft: 2,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-end',
