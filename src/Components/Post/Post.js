@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import {View, TouchableWithoutFeedback, Text, Image} from 'react-native';
+import {View,
+        TouchableWithoutFeedback,
+        Text,
+        Image,
+        TouchableOpacity
+        } from 'react-native';
 
 import Video from 'react-native-video';
 import Styles from './Styles';
@@ -8,11 +13,21 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 const Post = (props) => {
-    const { post } = props;
+    const [post, setPost] = useState(props.post);
     const [paused, setPaused] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
 
     const onPlayPausePress = () => {
         setPaused(!paused);
+    };
+
+    const onLikePress = () => {
+        const likesToAdd = isLiked ? -1: 1;
+        setIsLiked(!isLiked);
+        setPost({
+            ...post,
+            likes: post.likes + likesToAdd
+        })
     }
     return (
         <View>
@@ -32,10 +47,10 @@ const Post = (props) => {
                     <View style={Styles.profilePictureContainer}>
                         <Image style={Styles.profilePicture} source={{uri: post.user.userImage}} />
                     </View>
-                    <View style={Styles.iconContainer}>
-                        <AntDesign name={"heart"} size={30} color={"white"} />
+                    <TouchableOpacity style={Styles.iconContainer} onPress={onLikePress}>
+                        <AntDesign name={"heart"} size={30} color={isLiked? "red": "white"} />
                         <Text style={Styles.statsLabel}>{post.likes}</Text>
-                    </View>
+                    </TouchableOpacity>
                     <View style={Styles.iconContainer}>
                         <EvilIcons name={"comment"} size={30} color={"white"} />
                         <Text style={Styles.statsLabel}>{post.comments}</Text>
