@@ -13,7 +13,7 @@ const Styles = StyleSheet.create({
         right: 0,
     },
     uiContainer: {
-        height: Dimensions.get('window').height,
+        height: Dimensions.get('window').height - 60,
         justifyContent: 'flex-end',
     },
     bottomContainer: {

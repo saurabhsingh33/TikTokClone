@@ -6,7 +6,7 @@ export default [
             username: 'saurabh',
             userImage: 'https://www.sukhbeerbrar.com/en/wp-content/uploads/2021/04/186247435_1251996401883943_5719150641484314970_n.jpg'
         },
-        videoUri: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+        videoUri: 'https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4',
         description: 'My awesome post',
         song: 'Love me',
         songImage: 'https://www.sukhbeerbrar.com/en/wp-content/uploads/2021/04/186247435_1251996401883943_5719150641484314970_n.jpg',
