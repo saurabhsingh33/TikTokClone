@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "tiktokclone",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Saurabh\\Documents\\TikTokClone\\amplify\\backend\\api\\tiktokclone\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2023-01-13T10:58:15.239Z",
+      "keyDescription": ""
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authtiktokcloneb4a7628e"
+      }
+    ]
+  }
+}
