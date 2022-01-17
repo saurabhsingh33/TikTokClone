@@ -9,6 +9,7 @@ import {
 
 import Home from './src/Screens/Home/Home';
 import RootNavigation from './src/Navigation/Navigation';
+import { withAuthenticator } from 'aws-amplify-react-native';
 
 const App = () => {
 
@@ -22,4 +23,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);

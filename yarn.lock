@@ -3477,7 +3477,7 @@
     "json-schema-traverse" "^0.4.1"
     "uri-js" "^4.2.2"
 
-"amazon-cognito-identity-js@5.2.4":
+"amazon-cognito-identity-js@^5.2.4", "amazon-cognito-identity-js@5.2.4":
   "integrity" "sha512-CTRG5LKBfMYmNrqAU0l7X0SA4OOXsPFdHmkW0Ky3NOZZo767W5GZecm5uPz3YyAVde1OHaUyLXYzhXEmnn+VcQ=="
   "resolved" "https://registry.npmjs.org/amazon-cognito-identity-js/-/amazon-cognito-identity-js-5.2.4.tgz"
   "version" "5.2.4"

@@ -45,7 +45,7 @@ const Post = (props) => {
             <View style={Styles.uiContainer}>
                 <View style={Styles.rightContainer}>
                     <View style={Styles.profilePictureContainer}>
-                        <Image style={Styles.profilePicture} source={{uri: post.user.userImage}} />
+                        <Image style={Styles.profilePicture} source={{uri: post.user.imageUri}} />
                     </View>
                     <TouchableOpacity style={Styles.iconContainer} onPress={onLikePress}>
                         <AntDesign name={"heart"} size={30} color={isLiked? "red": "white"} />
@@ -62,17 +62,17 @@ const Post = (props) => {
                 </View>
                 <View style={Styles.bottomContainer}>
                     <View>
-                        <Text style={Styles.handle}>{`@${post.user.username}`}</Text>
+                        <Text style={Styles.handle}>{`@${post.user.userName}`}</Text>
                         <Text style={Styles.description}>{post.description}</Text>
 
                         <View style={Styles.songRow}>
                             {/* icon */}
                             <Entypo name={"beamed-note"} size={25} color={"white"} />
                             {/* name */}
-                            <Text style={Styles.songName}>{post.song}</Text>
+                            <Text style={Styles.songName}>{post.song.name}</Text>
                         </View>
                     </View>
-                    <Image style={Styles.songImage} source={{uri: post.songImage}} />
+                    <Image style={Styles.songImage} source={{uri: post.song.imageUri}} />
                 </View>
             </View>
         </View>

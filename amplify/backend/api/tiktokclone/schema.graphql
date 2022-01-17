@@ -5,6 +5,7 @@ type User @model @auth(rules: [{ allow: public}]) {
   id: ID! @primaryKey
   userName: String!
   email: String!
+  imageUri: String
   posts: [Post] @hasMany(indexName: "byPost", fields: ["id"])
 }
 
